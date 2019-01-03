@@ -6,6 +6,8 @@ target 'NasaApp' do
   # Pods for NasaApp
 	pod 'Alamofire'
     pod 'AlamofireNetworkActivityLogger', '~> 2.0'
+    pod 'SwiftyCoreData', :git => 'https://github.com/wojtowiczm/SwiftyCoreData.git', :branch => 'develop'
+    pod 'IQKeyboardManagerSwift'
   target 'NasaAppTests' do
     inherit! :search_paths
     # Pods for testing

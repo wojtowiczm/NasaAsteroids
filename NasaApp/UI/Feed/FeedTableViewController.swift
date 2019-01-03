@@ -8,16 +8,26 @@
 
 import UIKit
 
+protocol FeedTableViewControllerDelegate: class {
+    func feedTableView(_ tableView: UITableView, didSelectiCellWith model: Asteroid)
+}
+
 class FeedTableViewController: NSObject {
     
     let tableView: UITableView
     
-    init(tableView: UITableView) {
+    weak var delegate: FeedTableViewControllerDelegate?
+    
+    init(tableView: UITableView, delegate: FeedTableViewControllerDelegate) {
         self.tableView = tableView
+        self.delegate = delegate
     }
     
     var data: [AsteroidDayData] = [] {
-        didSet { tableView.reloadData() }
+        didSet {
+            data.sort { $0.dayDate! < $1.dayDate! }
+            tableView.reloadData()
+        }
     }
 }
 
@@ -32,8 +42,6 @@ extension FeedTableViewController: UITableViewDataSource {
             cell.configure(with: data[indexPath.section].objects[indexPath.row])
             return cell
         }
-            
-   //     }
         return UITableViewCell()
     }
     
@@ -42,4 +50,13 @@ extension FeedTableViewController: UITableViewDataSource {
     }
 }
 
-extension FeedTableViewController: UITableViewDelegate {}
+extension FeedTableViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return data[section].dayString
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.feedTableView(tableView, didSelectiCellWith: data[indexPath.section].objects[indexPath.row])
+    }
+}

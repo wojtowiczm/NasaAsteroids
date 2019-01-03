@@ -10,11 +10,9 @@ import Foundation
 
 class FeedRepository {
     
-    let asteroidsService: AsteroidsService = ApiManager()
+    let asteroidsService: FeedService = ApiManager()
    
     func loadData(from startDate: Date, to endDate: Date, success: @escaping (NeoFeedResponse) -> Void) {
-        asteroidsService.fetchNeoFeed(startDate: endDate, endDate: startDate, success: success)
+        asteroidsService.fetchNeoFeed(startDate: startDate, endDate: endDate, success: success)
     }
-    
-    
 }

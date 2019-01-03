@@ -8,11 +8,11 @@
 
 import Foundation
 
-protocol AsteroidsService {
+protocol FeedService {
     func fetchNeoFeed(startDate: Date, endDate: Date, success: @escaping (NeoFeedResponse) -> Void)
 }
 
-extension ApiManager: AsteroidsService {
+extension ApiManager: FeedService {
     
     func fetchNeoFeed(startDate: Date, endDate: Date, success: @escaping (NeoFeedResponse) -> Void) {
         request(for: .neoFeed(startDate: startDate, endDate: endDate), parameters: [:]).validate().responseJSON { response in
@@ -22,7 +22,7 @@ extension ApiManager: AsteroidsService {
                     success(neoFeedResponse)
                 }
             case .failure(let error):
-                
+                print(error.localizedDescription)
                 return
             }
         }

@@ -2,20 +2,37 @@ PODS:
   - Alamofire (4.8.0)
   - AlamofireNetworkActivityLogger (2.3.0):
     - Alamofire (~> 4.6)
+  - IQKeyboardManagerSwift (6.2.0)
+  - SwiftyCoreData (0.0.1)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireNetworkActivityLogger (~> 2.0)
+  - IQKeyboardManagerSwift
+  - SwiftyCoreData (from `https://github.com/wojtowiczm/SwiftyCoreData.git`, branch `develop`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireNetworkActivityLogger
+    - IQKeyboardManagerSwift
+
+EXTERNAL SOURCES:
+  SwiftyCoreData:
+    :branch: develop
+    :git: https://github.com/wojtowiczm/SwiftyCoreData.git
+
+CHECKOUT OPTIONS:
+  SwiftyCoreData:
+    :commit: 14438450dd46de8b1e53f5c04082200473bdcd3a
+    :git: https://github.com/wojtowiczm/SwiftyCoreData.git
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   AlamofireNetworkActivityLogger: 6f3076652ab7fa6c819b59be08ea038d339e36d8
+  IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
+  SwiftyCoreData: 19fc3fb1b298c563cce5182846bef70c48af83c1
 
-PODFILE CHECKSUM: 0dab2709ee77476256747442c061e51338ee0b1e
+PODFILE CHECKSUM: 2c03617aaa9822384ecaf3498a59991efc34c695
 
 COCOAPODS: 1.5.3

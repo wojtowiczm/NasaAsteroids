@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import AlamofireNetworkActivityLogger
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,10 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow()
-        window?.rootViewController = FeedViewController()
+        window?.rootViewController = UINavigationController(rootViewController: FeedViewController())
         window?.makeKeyAndVisible()
         NetworkActivityLogger.shared.level = .debug
         NetworkActivityLogger.shared.startLogging()
+        IQKeyboardManager.shared.enable = true
         return true
     }
 

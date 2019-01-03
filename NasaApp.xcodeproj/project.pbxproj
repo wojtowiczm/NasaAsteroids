@@ -9,6 +9,21 @@
 /* Begin PBXBuildFile section */
 		0805B89D3B86EDD26086630F /* Pods_NasaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946AD363BED1380812773C42 /* Pods_NasaApp.framework */; };
 		299CD0E11CEBF78332C2B1DE /* Pods_NasaAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAFD12AB65CAE4202C0C474 /* Pods_NasaAppTests.framework */; };
+		FF06F0E421DE235F0020041A /* AsteroidDayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06F0E321DE235F0020041A /* AsteroidDayData.swift */; };
+		FF06F0E621DE23780020041A /* CloseApproachData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06F0E521DE23780020041A /* CloseApproachData.swift */; };
+		FF06F0E821DE23900020041A /* RelativeVelocity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06F0E721DE23900020041A /* RelativeVelocity.swift */; };
+		FF06F0EA21DE23B00020041A /* NearEarthObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06F0E921DE23B00020041A /* NearEarthObjects.swift */; };
+		FF06F0EC21DE244B0020041A /* MissDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06F0EB21DE244B0020041A /* MissDistance.swift */; };
+		FF06F0F021DE58280020041A /* LookupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06F0EF21DE58280020041A /* LookupViewController.swift */; };
+		FF06F0F221DE58550020041A /* LookupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06F0F121DE58550020041A /* LookupViewModel.swift */; };
+		FF06F0F421DE58620020041A /* LookupViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06F0F321DE58620020041A /* LookupViewBuilder.swift */; };
+		FF06F0F621DE58890020041A /* LookupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06F0F521DE58890020041A /* LookupService.swift */; };
+		FF06F0F821DE59200020041A /* AsteroidDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06F0F721DE59200020041A /* AsteroidDetails.swift */; };
+		FF06F0FA21DE5A660020041A /* OrbitalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06F0F921DE5A660020041A /* OrbitalData.swift */; };
+		FF06F0FC21DE5D0F0020041A /* LookupRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06F0FB21DE5D0F0020041A /* LookupRepository.swift */; };
+		FF5E42FF21DE060B0037B8F5 /* EstimatedDiameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5E42FE21DE060B0037B8F5 /* EstimatedDiameter.swift */; };
+		FF5E430121DE06200037B8F5 /* EstimatedDiameterByUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5E430021DE06200037B8F5 /* EstimatedDiameterByUnit.swift */; };
+		FF5E430321DE064E0037B8F5 /* Asteroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5E430221DE064E0037B8F5 /* Asteroid.swift */; };
 		FFC62B1521DD135600DF9FF4 /* PersistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC62B1421DD135600DF9FF4 /* PersistanceService.swift */; };
 		FFF00C4A21DCCC1D00B525BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF00C4921DCCC1D00B525BE /* AppDelegate.swift */; };
 		FFF00C4C21DCCC1D00B525BE /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF00C4B21DCCC1D00B525BE /* FeedViewController.swift */; };
@@ -18,7 +33,7 @@
 		FFF00C6E21DCCD6800B525BE /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF00C6D21DCCD6800B525BE /* FeedViewModel.swift */; };
 		FFF00C7021DCCD7400B525BE /* FeedViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF00C6F21DCCD7400B525BE /* FeedViewBuilder.swift */; };
 		FFF00C7321DCCD9800B525BE /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF00C7221DCCD9800B525BE /* ApiManager.swift */; };
-		FFF00C7521DCCDB000B525BE /* AsteroidsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF00C7421DCCDB000B525BE /* AsteroidsService.swift */; };
+		FFF00C7521DCCDB000B525BE /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF00C7421DCCDB000B525BE /* FeedService.swift */; };
 		FFF00C7821DCD0E900B525BE /* FeedRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF00C7721DCD0E900B525BE /* FeedRepository.swift */; };
 		FFF00C9A21DCDD8C00B525BE /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF00C9921DCDD8C00B525BE /* DateExtension.swift */; };
 		FFF00C9D21DCDEF000B525BE /* NeoFeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF00C9C21DCDEF000B525BE /* NeoFeedResponse.swift */; };
@@ -45,6 +60,21 @@
 		B2DB95385863AB183B57A513 /* Pods-NasaAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NasaAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NasaAppTests/Pods-NasaAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		B83EA8FFC7E2581F08D4FD3F /* Pods-NasaAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NasaAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NasaAppTests/Pods-NasaAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F4547761FEDCAB64F5693B02 /* Pods-NasaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NasaApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NasaApp/Pods-NasaApp.debug.xcconfig"; sourceTree = "<group>"; };
+		FF06F0E321DE235F0020041A /* AsteroidDayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidDayData.swift; sourceTree = "<group>"; };
+		FF06F0E521DE23780020041A /* CloseApproachData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseApproachData.swift; sourceTree = "<group>"; };
+		FF06F0E721DE23900020041A /* RelativeVelocity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativeVelocity.swift; sourceTree = "<group>"; };
+		FF06F0E921DE23B00020041A /* NearEarthObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearEarthObjects.swift; sourceTree = "<group>"; };
+		FF06F0EB21DE244B0020041A /* MissDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissDistance.swift; sourceTree = "<group>"; };
+		FF06F0EF21DE58280020041A /* LookupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupViewController.swift; sourceTree = "<group>"; };
+		FF06F0F121DE58550020041A /* LookupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupViewModel.swift; sourceTree = "<group>"; };
+		FF06F0F321DE58620020041A /* LookupViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupViewBuilder.swift; sourceTree = "<group>"; };
+		FF06F0F521DE58890020041A /* LookupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupService.swift; sourceTree = "<group>"; };
+		FF06F0F721DE59200020041A /* AsteroidDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidDetails.swift; sourceTree = "<group>"; };
+		FF06F0F921DE5A660020041A /* OrbitalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitalData.swift; sourceTree = "<group>"; };
+		FF06F0FB21DE5D0F0020041A /* LookupRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupRepository.swift; sourceTree = "<group>"; };
+		FF5E42FE21DE060B0037B8F5 /* EstimatedDiameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatedDiameter.swift; sourceTree = "<group>"; };
+		FF5E430021DE06200037B8F5 /* EstimatedDiameterByUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatedDiameterByUnit.swift; sourceTree = "<group>"; };
+		FF5E430221DE064E0037B8F5 /* Asteroid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asteroid.swift; sourceTree = "<group>"; };
 		FFC62B1421DD135600DF9FF4 /* PersistanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceService.swift; sourceTree = "<group>"; };
 		FFF00C4621DCCC1D00B525BE /* NasaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NasaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFF00C4921DCCC1D00B525BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +88,7 @@
 		FFF00C6D21DCCD6800B525BE /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		FFF00C6F21DCCD7400B525BE /* FeedViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewBuilder.swift; sourceTree = "<group>"; };
 		FFF00C7221DCCD9800B525BE /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
-		FFF00C7421DCCDB000B525BE /* AsteroidsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsService.swift; sourceTree = "<group>"; };
+		FFF00C7421DCCDB000B525BE /* FeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedService.swift; sourceTree = "<group>"; };
 		FFF00C7721DCD0E900B525BE /* FeedRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRepository.swift; sourceTree = "<group>"; };
 		FFF00C9921DCDD8C00B525BE /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		FFF00C9C21DCDEF000B525BE /* NeoFeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeoFeedResponse.swift; sourceTree = "<group>"; };
@@ -106,6 +136,28 @@
 				B2DB95385863AB183B57A513 /* Pods-NasaAppTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FF06F0ED21DE58050020041A /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				FFF00CA421DCF9B000B525BE /* FeedTableViewController.swift */,
+				FFF00C4B21DCCC1D00B525BE /* FeedViewController.swift */,
+				FFF00C6D21DCCD6800B525BE /* FeedViewModel.swift */,
+				FFF00C6F21DCCD7400B525BE /* FeedViewBuilder.swift */,
+				FFF00CA221DCF79000B525BE /* FeedCell.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		FF06F0EE21DE58150020041A /* Lookup */ = {
+			isa = PBXGroup;
+			children = (
+				FF06F0EF21DE58280020041A /* LookupViewController.swift */,
+				FF06F0F121DE58550020041A /* LookupViewModel.swift */,
+				FF06F0F321DE58620020041A /* LookupViewBuilder.swift */,
+			);
+			path = Lookup;
 			sourceTree = "<group>";
 		};
 		FFC62B0F21DD133F00DF9FF4 /* Persistance */ = {
@@ -167,11 +219,8 @@
 		FFF00C6C21DCCD5800B525BE /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				FFF00C4B21DCCC1D00B525BE /* FeedViewController.swift */,
-				FFF00C6D21DCCD6800B525BE /* FeedViewModel.swift */,
-				FFF00C6F21DCCD7400B525BE /* FeedViewBuilder.swift */,
-				FFF00CA221DCF79000B525BE /* FeedCell.swift */,
-				FFF00CA421DCF9B000B525BE /* FeedTableViewController.swift */,
+				FF06F0EE21DE58150020041A /* Lookup */,
+				FF06F0ED21DE58050020041A /* Feed */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -180,7 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				FFF00C7221DCCD9800B525BE /* ApiManager.swift */,
-				FFF00C7421DCCDB000B525BE /* AsteroidsService.swift */,
+				FFF00C7421DCCDB000B525BE /* FeedService.swift */,
+				FF06F0F521DE58890020041A /* LookupService.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -189,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				FFF00C7721DCD0E900B525BE /* FeedRepository.swift */,
+				FF06F0FB21DE5D0F0020041A /* LookupRepository.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -205,6 +256,16 @@
 			isa = PBXGroup;
 			children = (
 				FFF00C9C21DCDEF000B525BE /* NeoFeedResponse.swift */,
+				FF5E42FE21DE060B0037B8F5 /* EstimatedDiameter.swift */,
+				FF5E430021DE06200037B8F5 /* EstimatedDiameterByUnit.swift */,
+				FF5E430221DE064E0037B8F5 /* Asteroid.swift */,
+				FF06F0E321DE235F0020041A /* AsteroidDayData.swift */,
+				FF06F0E521DE23780020041A /* CloseApproachData.swift */,
+				FF06F0E721DE23900020041A /* RelativeVelocity.swift */,
+				FF06F0E921DE23B00020041A /* NearEarthObjects.swift */,
+				FF06F0EB21DE244B0020041A /* MissDistance.swift */,
+				FF06F0F721DE59200020041A /* AsteroidDetails.swift */,
+				FF06F0F921DE5A660020041A /* OrbitalData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -318,11 +379,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-NasaApp/Pods-NasaApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityLogger.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -372,17 +435,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFF00C7521DCCDB000B525BE /* AsteroidsService.swift in Sources */,
+				FFF00C7521DCCDB000B525BE /* FeedService.swift in Sources */,
 				FFF00C9D21DCDEF000B525BE /* NeoFeedResponse.swift in Sources */,
 				FFC62B1521DD135600DF9FF4 /* PersistanceService.swift in Sources */,
 				FFF00C4C21DCCC1D00B525BE /* FeedViewController.swift in Sources */,
+				FF06F0E421DE235F0020041A /* AsteroidDayData.swift in Sources */,
+				FF5E430321DE064E0037B8F5 /* Asteroid.swift in Sources */,
+				FF06F0F621DE58890020041A /* LookupService.swift in Sources */,
+				FF06F0E821DE23900020041A /* RelativeVelocity.swift in Sources */,
 				FFF00C4A21DCCC1D00B525BE /* AppDelegate.swift in Sources */,
+				FF06F0F821DE59200020041A /* AsteroidDetails.swift in Sources */,
+				FF06F0F021DE58280020041A /* LookupViewController.swift in Sources */,
+				FF06F0FC21DE5D0F0020041A /* LookupRepository.swift in Sources */,
 				FFF00CA321DCF79000B525BE /* FeedCell.swift in Sources */,
+				FF06F0EC21DE244B0020041A /* MissDistance.swift in Sources */,
+				FF06F0EA21DE23B00020041A /* NearEarthObjects.swift in Sources */,
 				FFF00C7821DCD0E900B525BE /* FeedRepository.swift in Sources */,
+				FF5E430121DE06200037B8F5 /* EstimatedDiameterByUnit.swift in Sources */,
+				FF06F0FA21DE5A660020041A /* OrbitalData.swift in Sources */,
+				FF06F0F421DE58620020041A /* LookupViewBuilder.swift in Sources */,
 				FFF00C9A21DCDD8C00B525BE /* DateExtension.swift in Sources */,
 				FFF00CA521DCF9B000B525BE /* FeedTableViewController.swift in Sources */,
+				FF06F0E621DE23780020041A /* CloseApproachData.swift in Sources */,
 				FFF00C6E21DCCD6800B525BE /* FeedViewModel.swift in Sources */,
 				FFF00C7021DCCD7400B525BE /* FeedViewBuilder.swift in Sources */,
+				FF5E42FF21DE060B0037B8F5 /* EstimatedDiameter.swift in Sources */,
+				FF06F0F221DE58550020041A /* LookupViewModel.swift in Sources */,
 				FFF00C7321DCCD9800B525BE /* ApiManager.swift in Sources */,
 				FFF00C5221DCCC1D00B525BE /* NasaApp.xcdatamodeld in Sources */,
 			);

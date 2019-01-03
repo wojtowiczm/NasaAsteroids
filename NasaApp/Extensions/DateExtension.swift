@@ -31,6 +31,11 @@ extension Date {
         }
         return days.compactMap { $0.with(format: .api) }
     }
+}
+
+extension TimeInterval {
     
-    
+    static func days(_ amount: Double) -> TimeInterval {
+        return 60 * 60 * 24 * amount
+    }
 }
