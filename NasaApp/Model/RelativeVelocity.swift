@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct RelativeVelocity: Decodable {
+struct RelativeVelocity: Codable {
     let kilometersPerHour: String
     
     enum CodingKeys: String, CodingKey {

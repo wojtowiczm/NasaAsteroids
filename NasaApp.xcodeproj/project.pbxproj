@@ -25,6 +25,8 @@
 		FF5E430121DE06200037B8F5 /* EstimatedDiameterByUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5E430021DE06200037B8F5 /* EstimatedDiameterByUnit.swift */; };
 		FF5E430321DE064E0037B8F5 /* Asteroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5E430221DE064E0037B8F5 /* Asteroid.swift */; };
 		FFC62B1521DD135600DF9FF4 /* PersistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC62B1421DD135600DF9FF4 /* PersistanceService.swift */; };
+		FFD80AD721DF4E9D00B9C428 /* PictureOfTheDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD80AD621DF4E9D00B9C428 /* PictureOfTheDay.swift */; };
+		FFD80ADD21DF73A600B9C428 /* AsteroidDayDataMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD80ADC21DF73A600B9C428 /* AsteroidDayDataMO.swift */; };
 		FFF00C4A21DCCC1D00B525BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF00C4921DCCC1D00B525BE /* AppDelegate.swift */; };
 		FFF00C4C21DCCC1D00B525BE /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF00C4B21DCCC1D00B525BE /* FeedViewController.swift */; };
 		FFF00C5221DCCC1D00B525BE /* NasaApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FFF00C5021DCCC1D00B525BE /* NasaApp.xcdatamodeld */; };
@@ -76,6 +78,8 @@
 		FF5E430021DE06200037B8F5 /* EstimatedDiameterByUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatedDiameterByUnit.swift; sourceTree = "<group>"; };
 		FF5E430221DE064E0037B8F5 /* Asteroid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asteroid.swift; sourceTree = "<group>"; };
 		FFC62B1421DD135600DF9FF4 /* PersistanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceService.swift; sourceTree = "<group>"; };
+		FFD80AD621DF4E9D00B9C428 /* PictureOfTheDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDay.swift; sourceTree = "<group>"; };
+		FFD80ADC21DF73A600B9C428 /* AsteroidDayDataMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AsteroidDayDataMO.swift; path = /Users/michalwojtowicz/Desktop/NasaApp/NasaApp/Persistance/AsteroidDayDataMO.swift; sourceTree = "<absolute>"; };
 		FFF00C4621DCCC1D00B525BE /* NasaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NasaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFF00C4921DCCC1D00B525BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFF00C4B21DCCC1D00B525BE /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 		FFC62B0F21DD133F00DF9FF4 /* Persistance */ = {
 			isa = PBXGroup;
 			children = (
+				FFD80ADC21DF73A600B9C428 /* AsteroidDayDataMO.swift */,
 				FFC62B1421DD135600DF9FF4 /* PersistanceService.swift */,
 			);
 			path = Persistance;
@@ -266,6 +271,7 @@
 				FF06F0EB21DE244B0020041A /* MissDistance.swift */,
 				FF06F0F721DE59200020041A /* AsteroidDetails.swift */,
 				FF06F0F921DE5A660020041A /* OrbitalData.swift */,
+				FFD80AD621DF4E9D00B9C428 /* PictureOfTheDay.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -380,12 +386,14 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyCoreData/SwiftyCoreData.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityLogger.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyCoreData.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -439,6 +447,7 @@
 				FFF00C9D21DCDEF000B525BE /* NeoFeedResponse.swift in Sources */,
 				FFC62B1521DD135600DF9FF4 /* PersistanceService.swift in Sources */,
 				FFF00C4C21DCCC1D00B525BE /* FeedViewController.swift in Sources */,
+				FFD80AD721DF4E9D00B9C428 /* PictureOfTheDay.swift in Sources */,
 				FF06F0E421DE235F0020041A /* AsteroidDayData.swift in Sources */,
 				FF5E430321DE064E0037B8F5 /* Asteroid.swift in Sources */,
 				FF06F0F621DE58890020041A /* LookupService.swift in Sources */,
@@ -459,6 +468,7 @@
 				FF06F0E621DE23780020041A /* CloseApproachData.swift in Sources */,
 				FFF00C6E21DCCD6800B525BE /* FeedViewModel.swift in Sources */,
 				FFF00C7021DCCD7400B525BE /* FeedViewBuilder.swift in Sources */,
+				FFD80ADD21DF73A600B9C428 /* AsteroidDayDataMO.swift in Sources */,
 				FF5E42FF21DE060B0037B8F5 /* EstimatedDiameter.swift in Sources */,
 				FF06F0F221DE58550020041A /* LookupViewModel.swift in Sources */,
 				FFF00C7321DCCD9800B525BE /* ApiManager.swift in Sources */,

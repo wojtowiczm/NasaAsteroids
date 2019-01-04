@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct MissDistance: Decodable {
+struct MissDistance: Codable {
     let kilometers: String
 }

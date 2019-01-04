@@ -22,7 +22,13 @@ class FeedViewController: UIViewController {
         bindViewModel()
         setupView()
         bindView()
-        viewModel.fetchAsteroids()
+        viewModel.reloadData()
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cache", style: .plain, target: self, action: #selector(loadFromLocal))
+    }
+    
+    @objc func loadFromLocal() {
+        viewModel.loadFromCache()
     }
     
     private func setupView() {
@@ -40,8 +46,8 @@ class FeedViewController: UIViewController {
         viewBuilder.tableView.delegate = tableController
     }
     func bindViewModel() {
-        viewModel.dataChanged = { [weak self] objectsNearEarth in
-            self?.tableController.data = objectsNearEarth.data
+        viewModel.dataChanged = { [weak self] newData in
+            self?.tableController.data = newData
         }
         
         viewModel.datesUpdated = { [weak self] startDate, endDate in
@@ -49,6 +55,7 @@ class FeedViewController: UIViewController {
             self?.viewBuilder.endDateTextField.text = endDate.with(format: .api)
             self?.viewBuilder.startDatePicker.date = startDate
             self?.viewBuilder.endDatePicker.date = endDate
+            self?.viewModel.reloadData()
         }
     }
     

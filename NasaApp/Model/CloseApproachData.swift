@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct CloseAproachData: Decodable {
+struct CloseAproachData: Codable {
     
     let relativeVelocity: RelativeVelocity
     let missDistance: MissDistance

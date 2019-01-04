@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Asteroid: Decodable {
+struct Asteroid: Codable {
     
     let id: String
     let name: String

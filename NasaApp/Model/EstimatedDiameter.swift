@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct EstimatedDiameter: Decodable {
+struct EstimatedDiameter: Codable {
     let max: Double
     let min: Double
     

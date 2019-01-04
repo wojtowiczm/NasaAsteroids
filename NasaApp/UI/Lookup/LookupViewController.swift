@@ -30,10 +30,6 @@ class LookupViewController: UIViewController {
         viewModel.fetchAsteroidDetails()
         viewModel.fetchPictureOfTheDay()
     }
-    
-    private func setupView() {
-        
-    }
 
     private func bindViewModel() {
         viewModel.asteroidDetailsUpdated = { [weak self] asteroidDetails in
@@ -41,18 +37,23 @@ class LookupViewController: UIViewController {
         }
         
         viewModel.pictureOfTheDayUpdated = { [weak self] pictureData in
-            self?.updateBackgroundImage(with: pictureData)
+            self?.updatePictureOfTheDay(with: pictureData)
+        }
+        
+        viewModel.backgroundImageUpdated = { [weak self] image in
+            self?.viewBuilder.backgroundImageView.image = image
         }
     }
     
     private func updateView(with asteroidDetails: AsteroidDetails) {
         title = asteroidDetails.name
-        viewBuilder.orbitalPeroidLabel.text = asteroidDetails.orbitalData.orbitalPeriod
-        viewBuilder.apheliumDistanceLabel.text = asteroidDetails.orbitalData.aphelionDistance
-        viewBuilder.periheliumDistanceLabel.text = asteroidDetails.orbitalData.perihelionDistance
+        viewBuilder.orbitalPeroidLabel.text = "Orbital Period \(asteroidDetails.orbitalData.orbitalPeriod)"
+        viewBuilder.apheliumDistanceLabel.text = "Aphelion Distace \(asteroidDetails.orbitalData.aphelionDistance)"
+        viewBuilder.periheliumDistanceLabel.text = "Perihelion Distance \(asteroidDetails.orbitalData.perihelionDistance)"
     }
     
-    private func updateBackgroundImage(with data: Data) {
-        viewBuilder.backgroundImageView.image = UIImage(data: data)
+    private func updatePictureOfTheDay(with model: PictureOfTheDay) {
+        viewBuilder.backgroundImageTitleLabel.text = model.title
+        viewBuilder.backgroundImageExplanationLabel.text = model.explanation
     }
 }

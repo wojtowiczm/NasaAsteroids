@@ -26,12 +26,12 @@
                   moduleName = "NasaApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/michalwojtowicz/Desktop/NasaApp/NasaApp/Extensions/DateExtension.swift"
-                  timestampString = "568226685.611768"
+                  timestampString = "568297601.397591"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "32"
                   endingLineNumber = "32"
-                  offsetFromSymbolStart = "644">
+                  offsetFromSymbolStart = "859">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -41,12 +41,12 @@
                   moduleName = "NasaApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/michalwojtowicz/Desktop/NasaApp/NasaApp/Extensions/DateExtension.swift"
-                  timestampString = "568226685.614756"
+                  timestampString = "568297601.401309"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "32"
                   endingLineNumber = "32"
-                  offsetFromSymbolStart = "24">
+                  offsetFromSymbolStart = "21">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -137,13 +137,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NasaApp/UI/Lookup/LookupViewController.swift"
-            timestampString = "568226684.619377"
+            filePath = "NasaApp/UI/Feed/FeedViewController.swift"
+            timestampString = "568297601.253103"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "updateView(with:)"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "loadFromLocal()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NasaApp/UI/Feed/FeedViewController.swift"
+            timestampString = "568297601.253552"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "bindViewModel()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

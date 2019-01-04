@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct EstimatedDiameterByUnit: Decodable {
+struct EstimatedDiameterByUnit: Codable {
     let kilometers: EstimatedDiameter
 }

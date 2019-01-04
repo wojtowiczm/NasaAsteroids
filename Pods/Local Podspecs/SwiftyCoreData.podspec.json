@@ -1,8 +1,8 @@
 {
   "name": "SwiftyCoreData",
   "version": "0.0.1",
-  "summary": "A short description of [SwiftyCoreData.",
-  "description": "Lightweight wrapper for old fashioned CoreData framework",
+  "summary": "Lightweight wrapper for old fashioned CoreData framework",
+  "description": "TBD",
   "homepage": "https://github.com/wojtowiczm",
   "license": "MIT",
   "authors": {
@@ -15,9 +15,5 @@
     "git": "https://github.com/wojtowiczm/SwiftyCoreData.git",
     "tag": "0.0.1"
   },
-  "source_files": [
-    "Classes",
-    "Classes/**/*.{h,m}"
-  ],
-  "exclude_files": "Classes/Exclude"
+  "source_files": "SwiftyCoreData/**/*.swift"
 }

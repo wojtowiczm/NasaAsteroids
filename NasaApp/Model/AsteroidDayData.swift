@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import CoreData
+import SwiftyCoreData
 
-struct AsteroidDayData: Decodable {
+public struct AsteroidDayData: Codable {
     
     let dayString: String
     var objects: [Asteroid]
@@ -17,5 +19,21 @@ struct AsteroidDayData: Decodable {
         let formatter = DateFormatter()
         formatter.dateFormat = DateFormat.api.rawValue
         return formatter.date(from: dayString)
+    }
+    
+    init(dayString: String, objects: [Asteroid]) {
+        self.dayString = dayString
+        self.objects = objects
+    }
+}
+
+extension AsteroidDayData: SCDManagedObjectConvertible {
+    
+    public func put(in context: NSManagedObjectContext) {
+        let managedObject = AsteroidDayDataMO(context: context)
+        managedObject.date = dayString
+        if let data = try? JSONEncoder().encode(objects) {
+             managedObject.objects = data as NSData?
+        }
     }
 }

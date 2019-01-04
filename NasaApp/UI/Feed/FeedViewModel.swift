@@ -20,14 +20,19 @@ class FeedViewModel {
         didSet { validateDates()}
     }
     
-    var dataChanged: ((NearEarthObjects) -> Void)?
+    var dataChanged: (([AsteroidDayData]) -> Void)?
     
     var datesUpdated: ((Date,Date) -> Void)?
     
-    func fetchAsteroids() {
-        repository.loadData(from: startDate, to: endDate) { [weak self] response in
-            self?.dataChanged?(response.nearEarthObjects)
+    func reloadData() {
+        repository.realodCache(from: startDate, to: endDate) { [weak self] completion in
+            guard let dataChanged = self?.dataChanged else { return }
+            self?.repository.loadCachedData(success: dataChanged)
         }
+    }
+    
+    func loadFromCache() {
+        repository.loadCachedData(success: dataChanged!)
     }
 
     func validateDates() {
@@ -35,6 +40,5 @@ class FeedViewModel {
             endDate = Calendar.current.date(byAdding: .day, value: 7, to: startDate)
         }
         datesUpdated?(startDate, endDate)
-        fetchAsteroids()
     }
 }

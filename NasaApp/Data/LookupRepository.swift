@@ -10,13 +10,18 @@ import Foundation
 
 class LookupRepository {
     
-    let lookupService: LookupService = ApiManager()
+    private let lookupService: LookupService = ApiManager()
     
     func fetchAsteroidDetails(with id: String, success: @escaping (AsteroidDetails) -> Void) {
         lookupService.fetchAsteroidDetails(with: id, success: success)
     }
     
-    func fetchPictureOfTheDay(success: @escaping (Data) -> Void) {
+    func fetchPictureOfTheDay(success: @escaping (PictureOfTheDay) -> Void) {
         lookupService.fetchPictureOfTheDay(success: success)
     }
+    
+    func fetchBackgroundImageData(with url: String, success: @escaping (Data) -> Void) {
+        lookupService.fetchBackgroundImageData(from: url, success: success)
+    }
+    
 }

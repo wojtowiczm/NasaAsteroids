@@ -72,10 +72,10 @@ class FeedCell: UITableViewCell {
     func configure(with model: Asteroid) {
         hazardousIndicator.textColor = model.isPotentiallyHazardous ? .red : .black
         nameLabel.text = "Name: \(model.name)"
-        if let cloaseAproachData = model.closeAproachData.first {
-            velocityLabel.text = "Velocity: \(cloaseAproachData.relativeVelocity.kilometersPerHour) km/h"
-            distanceFromEarth.text = "Distance form earth: \(cloaseAproachData.missDistance.kilometers) km"
-        }
+//        if let cloaseAproachData = model.closeAproachData.first {
+//            velocityLabel.text = "Velocity: \(cloaseAproachData.relativeVelocity.kilometersPerHour) km/h"
+//            distanceFromEarth.text = "Distance form earth: \(cloaseAproachData.missDistance.kilometers) km"
+//        }
     }
     
 }

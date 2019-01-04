@@ -6,7 +6,7 @@
 //  Copyright © 2019 Michał Wójtowicz. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class LookupViewModel {
     
@@ -20,7 +20,9 @@ class LookupViewModel {
     
     var asteroidDetailsUpdated: ((AsteroidDetails) -> Void)?
     
-    var pictureOfTheDayUpdated: ((_ pictureData: Data) -> Void)?
+    var pictureOfTheDayUpdated: ((PictureOfTheDay) -> Void)?
+    
+    var backgroundImageUpdated: ((UIImage?) -> Void)?
     
     func fetchAsteroidDetails() {
         repository.fetchAsteroidDetails(with: asteroidId) { [weak self] asteroidDetails in
@@ -31,6 +33,13 @@ class LookupViewModel {
     func fetchPictureOfTheDay() {
         repository.fetchPictureOfTheDay { [weak self] data in
             self?.pictureOfTheDayUpdated?(data)
+            self?.fetchBackgroundImage(with: data.url)
+        }
+    }
+    
+    func fetchBackgroundImage(with url: String) {
+        repository.fetchBackgroundImageData(with: url) { [weak self] imageData in
+            self?.backgroundImageUpdated?(UIImage(data: imageData))
         }
     }
     

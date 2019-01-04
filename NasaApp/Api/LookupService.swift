@@ -11,13 +11,14 @@ import Foundation
 protocol LookupService {
     
     func fetchAsteroidDetails(with id: String, success: @escaping (AsteroidDetails) -> Void)
-    func fetchPictureOfTheDay(success: @escaping (Data) -> Void)
+    func fetchPictureOfTheDay(success: @escaping (PictureOfTheDay) -> Void)
+    func fetchBackgroundImageData(from url: String, success: @escaping (Data) -> Void)
 }
 
 extension ApiManager: LookupService {
     
     func fetchAsteroidDetails(with id: String, success: @escaping (AsteroidDetails) -> Void) {
-        request(for: .lookup(asteroidId: id), parameters: [:]).responseJSON { response in
+        request(for: .lookup(asteroidId: id)).responseJSON { response in
             switch response.result {
             case .success:
                 if let data = response.data {
@@ -34,8 +35,26 @@ extension ApiManager: LookupService {
         }
     }
     
-    func fetchPictureOfTheDay(success: @escaping (Data) -> Void) {
-        request(for: .pictureOfTheDay, parameters: [:]).responseData { response in
+    func fetchPictureOfTheDay(success: @escaping (PictureOfTheDay) -> Void) {
+        request(for: .pictureOfTheDay).responseJSON { response in
+            switch response.result {
+            case .success:
+                if let data = response.data {
+                    do {
+                        let pictureOfTheDay = try JSONDecoder().decode(PictureOfTheDay.self, from: data)
+                        success(pictureOfTheDay)
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func fetchBackgroundImageData(from url: String, success: @escaping (Data) -> Void) {
+        request(for: .image(url: url)).responseData { response in
             switch response.result {
             case .success(let data):
                 success(data)
