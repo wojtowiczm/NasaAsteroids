@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct OrbitalData: Decodable {
+struct OrbitalData: Codable {
     
     let perihelionDistance: String
     let aphelionDistance: String

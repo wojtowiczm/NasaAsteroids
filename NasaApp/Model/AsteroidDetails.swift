@@ -8,12 +8,14 @@
 
 import Foundation
 
-struct AsteroidDetails: Decodable {
+public struct AsteroidDetails: Codable {
     
+    let id: String
     let name: String
     let orbitalData: OrbitalData
     
     enum CodingKeys: String, CodingKey {
+        case id
         case name
         case orbitalData = "orbital_data"
     }

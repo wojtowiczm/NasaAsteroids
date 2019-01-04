@@ -14,6 +14,8 @@ class LookupViewController: UIViewController {
     
     lazy var viewBuilder = LookupViewBuilder(with: self.view)
     
+    var isExplanationBackgroundShowed = false
+    
     init(with asteroidId: String) {
         viewModel = LookupViewModel(with: asteroidId)
         super.init(nibName: nil, bundle: nil)
@@ -26,9 +28,15 @@ class LookupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bindViewModel()
+        bindView()
         viewBuilder.build()
         viewModel.fetchAsteroidDetails()
         viewModel.fetchPictureOfTheDay()
+    }
+    
+    private func bindView() {
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(explanationContainerTapped))
+        viewBuilder.backgroundImageInfoContainer.addGestureRecognizer(recognizer)
     }
 
     private func bindViewModel() {
@@ -55,5 +63,14 @@ class LookupViewController: UIViewController {
     private func updatePictureOfTheDay(with model: PictureOfTheDay) {
         viewBuilder.backgroundImageTitleLabel.text = model.title
         viewBuilder.backgroundImageExplanationLabel.text = model.explanation
+    }
+    
+    @objc func explanationContainerTapped() {
+        isExplanationBackgroundShowed = !isExplanationBackgroundShowed
+        viewBuilder.backgroundImageExplanationHeightConstraint.isActive = isExplanationBackgroundShowed
+        
+        UIView.animate(withDuration: 0.2) {
+            self.view.layoutIfNeeded()
+        }
     }
 }

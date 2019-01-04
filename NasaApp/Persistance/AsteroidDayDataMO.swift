@@ -26,6 +26,8 @@ public class AsteroidDayDataMO: NSManagedObject {
 
 extension AsteroidDayDataMO: SCDObjectConvertible {
     
+    public typealias Object = AsteroidDayData
+    
     public func toObject() -> AsteroidDayData? {
         guard let dayString = date,
             let data = objects as Data?,
@@ -33,10 +35,6 @@ extension AsteroidDayDataMO: SCDObjectConvertible {
             return nil
         }
         return AsteroidDayData(dayString: dayString, objects: asteroids)
-    }
-    
-    public typealias Object = AsteroidDayData
-    
-    
+    } 
 }
 

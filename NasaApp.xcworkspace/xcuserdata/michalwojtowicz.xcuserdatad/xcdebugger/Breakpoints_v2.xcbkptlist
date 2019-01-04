@@ -26,7 +26,7 @@
                   moduleName = "NasaApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/michalwojtowicz/Desktop/NasaApp/NasaApp/Extensions/DateExtension.swift"
-                  timestampString = "568297601.397591"
+                  timestampString = "568307538.446961"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "32"
@@ -41,7 +41,7 @@
                   moduleName = "NasaApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/michalwojtowicz/Desktop/NasaApp/NasaApp/Extensions/DateExtension.swift"
-                  timestampString = "568297601.401309"
+                  timestampString = "568307538.450695"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "32"
@@ -138,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NasaApp/UI/Feed/FeedViewController.swift"
-            timestampString = "568297601.253103"
+            timestampString = "568306896.771804"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
@@ -154,13 +154,109 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NasaApp/UI/Feed/FeedViewController.swift"
-            timestampString = "568297601.253552"
+            timestampString = "568306896.771893"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
             endingLineNumber = "50"
             landmarkName = "bindViewModel()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NasaApp/UI/Lookup/LookupViewController.swift"
+            timestampString = "568307538.297343"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "explanationContainerTapped()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NasaApp/Persistance/AsteroidDetailsMO.swift"
+            timestampString = "568306896.774873"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "toObject()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NasaApp/Persistance/AsteroidDetailsMO.swift"
+            timestampString = "568306896.77494"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "toObject()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NasaApp/Api/LookupService.swift"
+            timestampString = "568307538.2974761"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "fetchAsteroidDetails(with:success:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NasaApp.ApiManager.fetchAsteroidDetails(with: Swift.String, success: (NasaApp.AsteroidDetails) -&gt; ()) -&gt; ()"
+                  moduleName = "NasaApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/michalwojtowicz/Desktop/NasaApp/NasaApp/Api/LookupService.swift"
+                  timestampString = "568307538.493759"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "41">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in NasaApp.ApiManager.fetchAsteroidDetails(with: Swift.String, success: (NasaApp.AsteroidDetails) -&gt; ()) -&gt; ()"
+                  moduleName = "NasaApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/michalwojtowicz/Desktop/NasaApp/NasaApp/Api/LookupService.swift"
+                  timestampString = "568307538.4969651"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "59">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
